@@ -1,0 +1,101 @@
+/* 基础样式略... */
+
+/* 顶部导航栏 */
+#top-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a.active {
+    color: #007bff;
+}
+
+.nav-toggle {
+    display: none; /* 默认不显示 */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+}
+
+/* 主内容区域 */
+#content {
+    padding-top: 60px; /* 为顶部导航栏留出空间 */
+    padding-bottom: 60px; /* 为页脚留出空间 */
+}
+
+/* 页脚 */
+#footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    /* 移除固定定位 */
+    position: relative; /* 修改为相对定位 */
+    width: auto; /* 修改为自动宽度 */
+    margin-top: 60px; /* 为顶部导航栏留出空间 */
+}
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* 隐藏导航链接 */
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        box-shadow: -3px 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-toggle {
+        display: block; /* 在小屏幕上显示菜单按钮 */
+    }
+
+    #footer {
+        padding: 1rem 0;
+    }
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000; /* 默认颜色 */
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+/* 导航链接活动状态样式 */
+.nav-links a.active {
+    color: #007bff; /* 活动项颜色 */
+}
+
+
+/* 确保内容不被顶部导航栏遮挡 */
+body {
+    padding-top: 60px; /* 与#content的padding-top相同 */
+    padding-bottom: 60px; /* 与#footer的高度相同 */
+}

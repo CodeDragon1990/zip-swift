@@ -1,0 +1,79 @@
+/* 基础样式略... */
+
+.app-header {
+    text-align: center;
+    padding: 2rem;
+}
+
+.app-logo {
+    width: 150px; /* 根据实际Logo大小调整 */
+    height: auto;
+}
+
+.download-btn {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem 2rem; /* 增加内边距 */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px; /* 减小圆角 */
+    font-size: 1rem; /* 根据需要调整字体大小 */
+    line-height: 1.5; /* 合适的行高 */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* 增加背景色和变换的过渡效果 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+
+.download-btn:hover {
+    background-color: #0056b3; /* 鼠标悬浮时背景色变深 */
+    transform: translateY(-2px); /* 轻微上移 */
+}
+
+.download-btn:active {
+    background-color: #004085; /* 点击时背景色更深 */
+    transform: translateY(0); /* 回到原位 */
+}
+
+.features, .detailed-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-item, .feature-detail {
+    flex-basis: calc(50% - 2rem);
+    margin: 1rem;
+    text-align: center;
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+}
+
+.feature-description {
+    padding: 1rem;
+}
+
+/* 详细特点部分图片在右侧 */
+.detailed-features .reverse .feature-description,
+.detailed-features .reverse .feature-image {
+    text-align: left;
+}
+
+.detailed-features .reverse {
+    flex-direction: row-reverse;
+}
+
+.contributors {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .feature-item, .feature-detail {
+        flex-basis: 100%;
+    }
+}

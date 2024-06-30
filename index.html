@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <title>ZipSwift</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="top-bar">
+    <nav class="navbar">
+        <div class="app-name">ZipSwift</div>
+        <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()">&#9776;</button>
+        <div class="nav-links" id="nav-links">
+            <a href="#" class="active" onclick="loadContent('home.html')">首页</a>
+            <a href="#" onclick="loadContent('manual.html')">手册</a>
+            <a href="#" onclick="loadContent('download.html')">下载</a>
+            <a href="#" onclick="loadContent('about.html')">关于</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </div>
+    </nav>
+</header>
+
+<main id="content">
+    <!-- 默认显示首页内容，其他内容将通过JS动态加载 -->
+</main>
+
+<footer id="footer">
+    <div class="footer-content">
+        <p>版权所有 &copy; 2024 APP名称.</p>
+        <!-- 其他需要显示的信息 -->
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
